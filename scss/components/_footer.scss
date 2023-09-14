@@ -1,23 +1,25 @@
 @use "../partials_files/importers" as *;
 
 footer {
-  .wrapper-container {
-    position: relative;
-    height: 200px;
+  position: relative;
+  top: -53px;
+  @media screen and (max-width: 390px) {
+    top: 0;
+    background-color: $light-grey;
+    padding-bottom: 15px;
   }
 
   .portfolio-content {
     @include flex;
-    position: absolute;
-    top: -53px;
-    left: 0;
-    right: 0;
+    gap: 15px;
     width: 1000px;
     margin: 0 auto;
-    z-index: 1;
+    @media screen and (max-width: 390px) {
+      flex-direction: column;
+      width: 370px;
+    }
 
     .portfolio-flex-box {
-      margin: 0 10px;
       background-color: $white;
 
       .portfolio-wrap-box {

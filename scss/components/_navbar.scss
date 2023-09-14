@@ -7,10 +7,18 @@ nav {
   .wrapper-container {
     @include flex;
     justify-content: space-between;
+    @media screen and (max-width: 390px) {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 
   .nav-bar-left, .nav-bar-logo, .nav-bar-right {
     width: 33.33%;
+
+    @media screen and (max-width: 390px) {
+      width: 100%;;
+    }
   }
 
   .nav-bar-left {
@@ -18,11 +26,14 @@ nav {
       @include flex;
       height: 100%;
       align-items: center;
+      justify-content: space-between;
+      @media screen and (max-width: 390px) {
+        flex-direction: column;
+        gap: 5px;
+      }
 
       li {
         a {
-          margin: 0 20px;
-
           &:hover {
             color: $yellow;
           }
@@ -43,6 +54,10 @@ nav {
 
   .nav-bar-right {
     text-align: right;
+    @media screen and (max-width: 390px) {
+      text-align: center;
+    }
+
     ul {
       li {
         a {

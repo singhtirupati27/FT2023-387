@@ -1,21 +1,25 @@
 @use "../partials_files/importers" as *;
 
 .banner-container {
-  height: 610px;
   background-color: $light-grey;
+  position: relative;
 
   .wrapper-container {
     @include flex;
+    align-items: center;
+    @media screen and (max-width: 390px) {
+      flex-direction: column-reverse;
+    }
   }
 
   .banner-left-container {
     width: 50%;
-    @include flex-center;
-    align-items: stretch;
-    flex-direction: column;
 
     .banner-text {
       margin-bottom: 15px;
+      @media screen and (max-width: 390px) {
+        margin: 15px 0;
+      }
 
       h4 {
         display: inline-block;
@@ -34,7 +38,7 @@
     }
 
     .banner-title {
-      width: 480px;
+      max-width: 480px;
 
       h1 {
         color: $dark-black;
@@ -47,6 +51,10 @@
 
     .banner-para {
       padding-right: 88px;
+
+      @media screen and (max-width: 390px) {
+        padding-right: 0;
+      }
 
       p {
         line-height: 1.5;
@@ -72,6 +80,10 @@
 
     .banner-service {
       padding-right: 180px;
+      @media screen and (max-width: 390px) {
+        padding-right: 0;
+        padding-bottom: 15px;
+      }
 
       ul {
         li {
@@ -96,9 +108,20 @@
 
   .banner-image {
     width: 50%;
+    padding-left: 40px;
+    @media screen and (max-width: 390px) {
+      padding: 0 20px;
+    }
 
     img {
       @include image;
+    }
+  }
+
+  .banner-left-container, .banner-image {
+    @media screen and (max-width: 390px) {
+      width: 100%;
+      padding: 0 10px;
     }
   }
 }
