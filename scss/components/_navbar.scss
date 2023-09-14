@@ -1,0 +1,60 @@
+@use "../partials_files/importers" as *;
+
+nav {
+  background-color: $light-grey;
+  padding: 12px 0;
+
+  .wrapper-container {
+    @include flex;
+    justify-content: space-between;
+  }
+
+  .nav-bar-left, .nav-bar-logo, .nav-bar-right {
+    width: 33.33%;
+  }
+
+  .nav-bar-left {
+    ul {
+      @include flex;
+      height: 100%;
+      align-items: center;
+
+      li {
+        a {
+          margin: 0 20px;
+
+          &:hover {
+            color: $yellow;
+          }
+        }
+        .active {
+          @include active-button($yellow, $light-grey);
+        }
+      }
+    }
+  }
+
+  .nav-bar-logo {
+    @include flex-center;
+    img {
+      @include image;
+    }
+  }
+
+  .nav-bar-right {
+    text-align: right;
+    ul {
+      li {
+        a {
+          @include button;
+          &:hover {
+            @include button-hover;
+          }
+        }
+        .active {
+          @include active-button($white, $dark-blue);
+        }
+      }
+    }
+  }
+}

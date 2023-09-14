@@ -1,0 +1,104 @@
+@use "../partials_files/importers" as *;
+
+.banner-container {
+  height: 610px;
+  background-color: $light-grey;
+
+  .wrapper-container {
+    @include flex;
+  }
+
+  .banner-left-container {
+    width: 50%;
+    @include flex-center;
+    align-items: stretch;
+    flex-direction: column;
+
+    .banner-text {
+      margin-bottom: 15px;
+
+      h4 {
+        display: inline-block;
+        color: $dark-blue;
+      }
+
+      &::before {
+        content: "";
+        width: 40px;
+        height: 3px;
+        background-color: $yellow;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+      }
+    }
+
+    .banner-title {
+      width: 480px;
+
+      h1 {
+        color: $dark-black;
+        font-size: 70px;
+        font-family: myFont-1;
+        font-weight: 100;
+        letter-spacing: 1.5px;
+      }
+    }
+
+    .banner-para {
+      padding-right: 88px;
+
+      p {
+        line-height: 1.5;
+      }
+    }
+
+    .banner-button {
+      margin: 30px 0;
+
+      a {
+        @include button;
+        display: inline-block;
+
+        &:hover {
+          @include button-hover;
+        }
+      }
+
+      .active {
+        @include active-button($white, $dark-blue);
+      }
+    }
+
+    .banner-service {
+      padding-right: 180px;
+
+      ul {
+        li {
+          margin-bottom: 15px;
+
+          a {
+            &::before {
+              content: "\2022";
+              color: $yellow;
+              margin-right: 20px;
+              margin-left: 20px;
+            }
+          }
+
+          .no-desc::before {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+
+  .banner-image {
+    width: 50%;
+
+    img {
+      @include image;
+    }
+  }
+}
