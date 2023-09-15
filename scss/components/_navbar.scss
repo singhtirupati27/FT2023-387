@@ -7,17 +7,17 @@ nav {
   .wrapper-container {
     @include flex;
     justify-content: space-between;
-    @media screen and (max-width: 390px) {
+    @include iphone12-media($iphone-screen) {
       flex-direction: column;
-      gap: 10px;
+      gap: 10px
     }
   }
 
   .nav-bar-left, .nav-bar-logo, .nav-bar-right {
     width: 33.33%;
 
-    @media screen and (max-width: 390px) {
-      width: 100%;;
+    @include iphone12-media($iphone-screen) {
+      width: 100%;
     }
   }
 
@@ -27,9 +27,9 @@ nav {
       height: 100%;
       align-items: center;
       justify-content: space-between;
-      @media screen and (max-width: 390px) {
+      @include iphone12-media($iphone-screen) {
         flex-direction: column;
-        gap: 5px;
+        gap: 5px
       }
 
       li {
@@ -54,8 +54,8 @@ nav {
 
   .nav-bar-right {
     text-align: right;
-    @media screen and (max-width: 390px) {
-      text-align: center;
+    @include iphone12-media($iphone-screen) {
+      text-align: center
     }
 
     ul {

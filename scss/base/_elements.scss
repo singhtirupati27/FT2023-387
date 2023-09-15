@@ -19,6 +19,10 @@ body {
   max-width: 1180px;
   height: 100%;
   margin: 0 auto;
+
+  @include iphone12-media($iphone-screen) {
+    padding: 0 15px;
+  }
 }
 
 a {

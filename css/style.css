@@ -63,6 +63,11 @@ body {
   height: 100%;
   margin: 0 auto;
 }
+@media screen and (max-width: 390px) {
+  .wrapper-container {
+    padding: 0 15px;
+  }
+}
 
 a {
   display: block;
@@ -264,7 +269,7 @@ nav .nav-bar-right ul li .active {
 }
 @media screen and (max-width: 390px) {
   .banner-container .banner-image {
-    padding: 0 20px;
+    padding-left: 0;
   }
 }
 .banner-container .banner-image img {
@@ -275,7 +280,6 @@ nav .nav-bar-right ul li .active {
 @media screen and (max-width: 390px) {
   .banner-container .banner-left-container, .banner-container .banner-image {
     width: 100%;
-    padding: 0 10px;
   }
 }
 
@@ -299,7 +303,7 @@ footer .portfolio-content {
 @media screen and (max-width: 390px) {
   footer .portfolio-content {
     flex-direction: column;
-    width: 370px;
+    width: 360px;
   }
 }
 footer .portfolio-content .portfolio-flex-box {

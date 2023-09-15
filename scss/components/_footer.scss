@@ -3,7 +3,7 @@
 footer {
   position: relative;
   top: -53px;
-  @media screen and (max-width: 390px) {
+  @include iphone12-media($iphone-screen) {
     top: 0;
     background-color: $light-grey;
     padding-bottom: 15px;
@@ -14,9 +14,9 @@ footer {
     gap: 15px;
     width: 1000px;
     margin: 0 auto;
-    @media screen and (max-width: 390px) {
+    @include  iphone12-media($iphone-screen) {
       flex-direction: column;
-      width: 370px;
+      width: 360px;
     }
 
     .portfolio-flex-box {
