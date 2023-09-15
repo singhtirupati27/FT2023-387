@@ -1,95 +1,95 @@
 @use "../partials_files/importers" as *;
 
-nav {
+.nav-bar {
   background-color: $light-grey;
   padding: 12px 0;
 
-  .wrapper-container {
+  &-menu {
     @include flex;
     justify-content: space-between;
-  }
 
-  .nav-bar-left, .nav-bar-logo, .nav-bar-right {
-    width: 33.33%;
+    &__left-item, &__logo, &__right-item {
+      width: 33.33%;
 
-    @include iphone12-media($iphone-screen) {
-      width: 100%;
-    }
-  }
-
-  .nav-bar-left {
-    @include iphone12-media($iphone-screen) {
-      display: none;
-    }
-    ul {
-      @include flex;
-      height: 100%;
-      align-items: center;
-      justify-content: space-between;
       @include iphone12-media($iphone-screen) {
-        flex-direction: column;
-        gap: 5px;
-        align-items: start;
+        width: 100%;
       }
+    }
 
-      li {
-        a {
-          &:hover {
-            color: $yellow;
+    &__left-item {
+      @include iphone12-media($iphone-screen) {
+        display: none;
+      }
+      ul {
+        @include flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        @include iphone12-media($iphone-screen) {
+          flex-direction: column;
+          gap: 5px;
+          align-items: start;
+        }
+
+        li {
+          a {
+            &:hover {
+              color: $yellow;
+            }
+          }
+          .button_active {
+            @include active-button($yellow, $light-grey);
           }
         }
-        .active {
-          @include active-button($yellow, $light-grey);
+      }
+    }
+
+    &__logo {
+      @include flex-center;
+      img {
+        @include image;
+      }
+    }
+
+    &__right-item {
+      text-align: right;
+      @include iphone12-media($iphone-screen) {
+        text-align: center;
+        display: none;
+      }
+
+      ul {
+        li {
+          a {
+            @include button;
+            &:hover {
+              @include button-hover;
+            }
+          }
+          .button_active {
+            @include active-button($white, $dark-blue);
+          }
         }
       }
     }
-  }
 
-  .nav-bar-logo {
-    @include flex-center;
-    img {
-      @include image;
-    }
-  }
-
-  .nav-bar-right {
-    text-align: right;
-    @include iphone12-media($iphone-screen) {
-      text-align: center;
+    &__toggle-menu {
       display: none;
-    }
 
-    ul {
-      li {
-        a {
-          @include button;
-          &:hover {
-            @include button-hover;
-          }
-        }
-        .active {
-          @include active-button($white, $dark-blue);
-        }
-      }
-    }
-  }
-
-  .toggle-icon {
-    display: none;
-
-    @include iphone12-media($iphone-screen) {
-      display: inline-block;
-    }
-
-    .toggle-bar {
       @include iphone12-media($iphone-screen) {
         display: inline-block;
-        font-weight: bold;
-        font-size: 20px;
+      }
 
-        &:hover {
-          cursor: pointer;
-          color: $yellow;
+      &__bar {
+        @include iphone12-media($iphone-screen) {
+          display: inline-block;
+          font-weight: bold;
+          font-size: 20px;
+
+          &:hover {
+            cursor: pointer;
+            color: $yellow;
+          }
         }
       }
     }

@@ -86,67 +86,67 @@ h3 {
   color: #007a82;
 }
 
-nav {
+.nav-bar {
   background-color: #ededed;
   padding: 12px 0;
 }
-nav .wrapper-container {
+.nav-bar-menu {
   display: flex;
   justify-content: space-between;
 }
-nav .nav-bar-left, nav .nav-bar-logo, nav .nav-bar-right {
+.nav-bar-menu__left-item, .nav-bar-menu__logo, .nav-bar-menu__right-item {
   width: 33.33%;
 }
 @media screen and (max-width: 390px) {
-  nav .nav-bar-left, nav .nav-bar-logo, nav .nav-bar-right {
+  .nav-bar-menu__left-item, .nav-bar-menu__logo, .nav-bar-menu__right-item {
     width: 100%;
   }
 }
 @media screen and (max-width: 390px) {
-  nav .nav-bar-left {
+  .nav-bar-menu__left-item {
     display: none;
   }
 }
-nav .nav-bar-left ul {
+.nav-bar-menu__left-item ul {
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: space-between;
 }
 @media screen and (max-width: 390px) {
-  nav .nav-bar-left ul {
+  .nav-bar-menu__left-item ul {
     flex-direction: column;
     gap: 5px;
     align-items: start;
   }
 }
-nav .nav-bar-left ul li a:hover {
+.nav-bar-menu__left-item ul li a:hover {
   color: #febb0c;
 }
-nav .nav-bar-left ul li .active {
+.nav-bar-menu__left-item ul li .button_active {
   color: #febb0c;
   background-color: #ededed;
 }
-nav .nav-bar-logo {
+.nav-bar-menu__logo {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-nav .nav-bar-logo img {
+.nav-bar-menu__logo img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-nav .nav-bar-right {
+.nav-bar-menu__right-item {
   text-align: right;
 }
 @media screen and (max-width: 390px) {
-  nav .nav-bar-right {
+  .nav-bar-menu__right-item {
     text-align: center;
     display: none;
   }
 }
-nav .nav-bar-right ul li a {
+.nav-bar-menu__right-item ul li a {
   display: block;
   color: #666666;
   border: 0;
@@ -154,64 +154,64 @@ nav .nav-bar-right ul li a {
   padding: 10px 20px;
   background-color: #ededed;
 }
-nav .nav-bar-right ul li a:hover {
+.nav-bar-menu__right-item ul li a:hover {
   cursor: pointer;
   color: #ffffff;
   background-color: #007a82;
 }
-nav .nav-bar-right ul li .active {
+.nav-bar-menu__right-item ul li .button_active {
   color: #ffffff;
   background-color: #007a82;
 }
-nav .toggle-icon {
+.nav-bar-menu__toggle-menu {
   display: none;
 }
 @media screen and (max-width: 390px) {
-  nav .toggle-icon {
+  .nav-bar-menu__toggle-menu {
     display: inline-block;
   }
 }
 @media screen and (max-width: 390px) {
-  nav .toggle-icon .toggle-bar {
+  .nav-bar-menu__toggle-menu__bar {
     display: inline-block;
     font-weight: bold;
     font-size: 20px;
   }
-  nav .toggle-icon .toggle-bar:hover {
+  .nav-bar-menu__toggle-menu__bar:hover {
     cursor: pointer;
     color: #febb0c;
   }
 }
 
-.banner-container {
+.hero {
   background-color: #ededed;
   position: relative;
 }
-.banner-container .wrapper-container {
+.hero-banner {
   display: flex;
   align-items: center;
 }
 @media screen and (max-width: 390px) {
-  .banner-container .wrapper-container {
+  .hero-banner {
     flex-direction: column-reverse;
   }
 }
-.banner-container .banner-left-container {
+.hero-banner__left-item {
   width: 50%;
 }
-.banner-container .banner-left-container .banner-text {
+.hero-banner__left-item__text {
   margin-bottom: 15px;
 }
 @media screen and (max-width: 390px) {
-  .banner-container .banner-left-container .banner-text {
+  .hero-banner__left-item__text {
     margin: 15px 0;
   }
 }
-.banner-container .banner-left-container .banner-text h4 {
+.hero-banner__left-item__text h4 {
   display: inline-block;
   color: #007a82;
 }
-.banner-container .banner-left-container .banner-text::before {
+.hero-banner__left-item__text::before {
   content: "";
   width: 40px;
   height: 3px;
@@ -220,31 +220,31 @@ nav .toggle-icon {
   vertical-align: middle;
   margin-right: 15px;
 }
-.banner-container .banner-left-container .banner-title {
+.hero-banner__left-item__title {
   max-width: 480px;
 }
-.banner-container .banner-left-container .banner-title h1 {
+.hero-banner__left-item__title h1 {
   color: #3d3d3d;
   font-size: 70px;
   font-family: myFont-1;
   font-weight: 100;
   letter-spacing: 1.5px;
 }
-.banner-container .banner-left-container .banner-para {
+.hero-banner__left-item__para {
   padding-right: 88px;
 }
 @media screen and (max-width: 390px) {
-  .banner-container .banner-left-container .banner-para {
+  .hero-banner__left-item__para {
     padding-right: 0;
   }
 }
-.banner-container .banner-left-container .banner-para p {
+.hero-banner__left-item__para p {
   line-height: 1.5;
 }
-.banner-container .banner-left-container .banner-button {
+.hero-banner__left-item__button {
   margin: 30px 0;
 }
-.banner-container .banner-left-container .banner-button a {
+.hero-banner__left-item__button a {
   display: block;
   color: #666666;
   border: 0;
@@ -253,102 +253,102 @@ nav .toggle-icon {
   background-color: #ededed;
   display: inline-block;
 }
-.banner-container .banner-left-container .banner-button a:hover {
+.hero-banner__left-item__button a:hover {
   cursor: pointer;
   color: #ffffff;
   background-color: #007a82;
 }
-.banner-container .banner-left-container .banner-button .active {
+.hero-banner__left-item__button .button_active {
   color: #ffffff;
   background-color: #007a82;
 }
-.banner-container .banner-left-container .banner-service {
+.hero-banner__left-item__service {
   padding-right: 180px;
 }
 @media screen and (max-width: 390px) {
-  .banner-container .banner-left-container .banner-service {
+  .hero-banner__left-item__service {
     padding-right: 0;
     padding-bottom: 15px;
   }
 }
-.banner-container .banner-left-container .banner-service ul li {
+.hero-banner__left-item__service ul li {
   margin-bottom: 15px;
 }
-.banner-container .banner-left-container .banner-service ul li a::before {
+.hero-banner__left-item__service ul li a::before {
   content: "•";
   color: #febb0c;
   margin-right: 20px;
   margin-left: 20px;
 }
-.banner-container .banner-left-container .banner-service ul li .no-desc::before {
+.hero-banner__left-item__service ul li .no-desc::before {
   content: none;
 }
-.banner-container .banner-image {
+.hero-banner__image {
   width: 50%;
   padding-left: 40px;
 }
 @media screen and (max-width: 390px) {
-  .banner-container .banner-image {
+  .hero-banner__image {
     padding-left: 0;
   }
 }
-.banner-container .banner-image img {
+.hero-banner__image img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 @media screen and (max-width: 390px) {
-  .banner-container .banner-left-container, .banner-container .banner-image {
+  .hero-banner__left-item, .hero-banner__image {
     width: 100%;
   }
 }
 
-footer {
+.portfolio {
   position: relative;
   top: -53px;
 }
 @media screen and (max-width: 390px) {
-  footer {
+  .portfolio {
     top: 0;
     background-color: #ededed;
     padding-bottom: 15px;
   }
 }
-footer .portfolio-content {
+.portfolio-content__item {
   display: flex;
   gap: 15px;
   width: 1000px;
   margin: 0 auto;
 }
 @media screen and (max-width: 390px) {
-  footer .portfolio-content {
+  .portfolio-content__item {
     flex-direction: column;
     width: 360px;
   }
 }
-footer .portfolio-content .portfolio-flex-box {
+.portfolio-content__item__flex-box {
   background-color: #ffffff;
 }
-footer .portfolio-content .portfolio-flex-box .portfolio-wrap-box {
+.portfolio-content__item__flex-box__wrap-box {
   margin: 18px;
   border-bottom: 3px solid #febb0c;
 }
-footer .portfolio-content .portfolio-flex-box .portfolio-wrap-box h3 {
+.portfolio-content__item__flex-box__wrap-box h3 {
   font-size: 25px;
 }
-footer .portfolio-content .portfolio-flex-box .portfolio-wrap-box h3 span {
+.portfolio-content__item__flex-box__wrap-box h3 span {
   display: block;
 }
-footer .portfolio-content .portfolio-flex-box .portfolio-wrap-box p {
+.portfolio-content__item__flex-box__wrap-box p {
   padding: 25px 0;
 }
-footer .portfolio-content .portfolio-flex-box:hover {
+.portfolio-content__item__flex-box:hover {
   color: #ffffff;
   background-color: #007a82;
 }
-footer .portfolio-content .portfolio-flex-box:hover h3 {
+.portfolio-content__item__flex-box:hover h3 {
   color: #febb0c;
 }
-footer .portfolio-content .shadow {
+.portfolio-content__item .shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.65);
 }/*# sourceMappingURL=style.css.map */

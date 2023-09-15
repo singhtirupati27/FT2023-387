@@ -1,6 +1,6 @@
 @use "../partials_files/importers" as *;
 
-footer {
+.portfolio {
   position: relative;
   top: -53px;
   @include iphone12-media($iphone-screen) {
@@ -9,47 +9,49 @@ footer {
     padding-bottom: 15px;
   }
 
-  .portfolio-content {
-    @include flex;
-    gap: 15px;
-    width: 1000px;
-    margin: 0 auto;
-    @include  iphone12-media($iphone-screen) {
-      flex-direction: column;
-      width: 360px;
-    }
+  &-content {
+    &__item {
+      @include flex;
+      gap: 15px;
+      width: 1000px;
+      margin: 0 auto;
+      @include  iphone12-media($iphone-screen) {
+        flex-direction: column;
+        width: 360px;
+      }
 
-    .portfolio-flex-box {
-      background-color: $white;
+      &__flex-box {
+        background-color: $white;
 
-      .portfolio-wrap-box {
-        margin: 18px;
-        border-bottom: 3px solid $yellow;
+        &__wrap-box {
+          margin: 18px;
+          border-bottom: 3px solid $yellow;
 
-        h3 {
-          font-size: 25px;
-          span {
-            display: block;
+          h3 {
+            font-size: 25px;
+            span {
+              display: block;
+            }
+          }
+
+          p {
+            padding: 25px 0;
           }
         }
 
-        p {
-          padding: 25px 0;
+        &:hover {
+          color: $white;
+          background-color: $dark-blue;
+
+          h3 {
+            color: $yellow;
+          }
         }
       }
 
-      &:hover {
-        color: $white;
-        background-color: $dark-blue;
-
-        h3 {
-          color: $yellow;
-        }
+      .shadow {
+        @include shadow;
       }
-    }
-
-    .shadow {
-      @include shadow;
     }
   }
 }
