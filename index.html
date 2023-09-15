@@ -11,9 +11,9 @@
   <div class="main-container">
     <!-- Navbar start -->
     <header>
-      <nav class="nav-bar">
+      <nav class="nav-bar" id="nav-top">
         <div class="wrapper-container">
-          <div class="nav-bar-left">
+          <div class="nav-bar-left" id="nav-left">
             <ul>
               <li><a href="#" class="active">Home</a></li>
               <li><a href="#">How it works</a></li>
@@ -24,11 +24,14 @@
           <div class="nav-bar-logo">
             <a href="#"><img src="./assets/images/Aexpert.svg" alt="Aexpert"></a>
           </div>
-          <div class="nav-bar-right">
+          <div class="nav-bar-right" id="nav-right">
             <ul>
               <li><a href="#">Sign in</a></li>
               <li><a href="#" class="active">Sign up</a></li>
             </ul>
+          </div>
+          <div class="toggle-icon">
+            <a class="toggle-bar" onclick="navToggle()">X</a>
           </div>
         </div>
       </nav>
@@ -106,5 +109,7 @@
 
   </div>
   <!-- Main container end -->
+
+  <script src="./js/script.js"></script>
 </body>
 </html>

@@ -7,10 +7,6 @@ nav {
   .wrapper-container {
     @include flex;
     justify-content: space-between;
-    @include iphone12-media($iphone-screen) {
-      flex-direction: column;
-      gap: 10px
-    }
   }
 
   .nav-bar-left, .nav-bar-logo, .nav-bar-right {
@@ -22,6 +18,9 @@ nav {
   }
 
   .nav-bar-left {
+    @include iphone12-media($iphone-screen) {
+      display: none;
+    }
     ul {
       @include flex;
       height: 100%;
@@ -29,7 +28,8 @@ nav {
       justify-content: space-between;
       @include iphone12-media($iphone-screen) {
         flex-direction: column;
-        gap: 5px
+        gap: 5px;
+        align-items: start;
       }
 
       li {
@@ -55,7 +55,8 @@ nav {
   .nav-bar-right {
     text-align: right;
     @include iphone12-media($iphone-screen) {
-      text-align: center
+      text-align: center;
+      display: none;
     }
 
     ul {
@@ -68,6 +69,27 @@ nav {
         }
         .active {
           @include active-button($white, $dark-blue);
+        }
+      }
+    }
+  }
+
+  .toggle-icon {
+    display: none;
+
+    @include iphone12-media($iphone-screen) {
+      display: inline-block;
+    }
+
+    .toggle-bar {
+      @include iphone12-media($iphone-screen) {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 20px;
+
+        &:hover {
+          cursor: pointer;
+          color: $yellow;
         }
       }
     }

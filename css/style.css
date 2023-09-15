@@ -94,18 +94,17 @@ nav .wrapper-container {
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 390px) {
-  nav .wrapper-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
 nav .nav-bar-left, nav .nav-bar-logo, nav .nav-bar-right {
   width: 33.33%;
 }
 @media screen and (max-width: 390px) {
   nav .nav-bar-left, nav .nav-bar-logo, nav .nav-bar-right {
     width: 100%;
+  }
+}
+@media screen and (max-width: 390px) {
+  nav .nav-bar-left {
+    display: none;
   }
 }
 nav .nav-bar-left ul {
@@ -118,6 +117,7 @@ nav .nav-bar-left ul {
   nav .nav-bar-left ul {
     flex-direction: column;
     gap: 5px;
+    align-items: start;
   }
 }
 nav .nav-bar-left ul li a:hover {
@@ -143,6 +143,7 @@ nav .nav-bar-right {
 @media screen and (max-width: 390px) {
   nav .nav-bar-right {
     text-align: center;
+    display: none;
   }
 }
 nav .nav-bar-right ul li a {
@@ -161,6 +162,25 @@ nav .nav-bar-right ul li a:hover {
 nav .nav-bar-right ul li .active {
   color: #ffffff;
   background-color: #007a82;
+}
+nav .toggle-icon {
+  display: none;
+}
+@media screen and (max-width: 390px) {
+  nav .toggle-icon {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 390px) {
+  nav .toggle-icon .toggle-bar {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  nav .toggle-icon .toggle-bar:hover {
+    cursor: pointer;
+    color: #febb0c;
+  }
 }
 
 .banner-container {
