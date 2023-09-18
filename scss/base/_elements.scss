@@ -1,0 +1,44 @@
+@use "../partials_files/importers" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: myFont-8, sans-serif;
+  color: $grey;
+}
+
+.wrapper-container {
+  max-width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+
+  @include iphone12-media($iphone-screen) {
+    padding: 0 15px;
+  }
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: $grey;
+}
+
+ul {
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+  }
+}
+
+h3 {
+  color: $dark-blue;
+}

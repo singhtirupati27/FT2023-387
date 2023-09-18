@@ -1,0 +1,57 @@
+@use "../partials_files/importers" as *;
+
+.portfolio {
+  position: relative;
+  top: -53px;
+  @include iphone12-media($iphone-screen) {
+    top: 0;
+    background-color: $light-grey;
+    padding-bottom: 15px;
+  }
+
+  &-content {
+    &__item {
+      @include flex;
+      gap: 15px;
+      width: 1000px;
+      margin: 0 auto;
+      @include  iphone12-media($iphone-screen) {
+        flex-direction: column;
+        width: 360px;
+      }
+
+      &__flex-box {
+        background-color: $white;
+
+        &__wrap-box {
+          margin: 18px;
+          border-bottom: 3px solid $yellow;
+
+          h3 {
+            font-size: 25px;
+            span {
+              display: block;
+            }
+          }
+
+          p {
+            padding: 25px 0;
+          }
+        }
+
+        &:hover {
+          color: $white;
+          background-color: $dark-blue;
+
+          h3 {
+            color: $yellow;
+          }
+        }
+      }
+
+      .shadow {
+        @include shadow;
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@use "../partials_files/importers" as *;
+
+.nav-bar {
+  background-color: $light-grey;
+  padding: 12px 0;
+
+  &-menu {
+    @include flex;
+    justify-content: space-between;
+
+    &__left-item, &__logo, &__right-item {
+      width: 33.33%;
+
+      @include iphone12-media($iphone-screen) {
+        width: 100%;
+      }
+    }
+
+    &__left-item {
+      @include iphone12-media($iphone-screen) {
+        display: none;
+      }
+      ul {
+        @include flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        @include iphone12-media($iphone-screen) {
+          flex-direction: column;
+          gap: 5px;
+          align-items: start;
+        }
+
+        li {
+          a {
+            &:hover {
+              color: $yellow;
+            }
+          }
+          .button_active {
+            @include active-button($yellow, $light-grey);
+          }
+        }
+      }
+    }
+
+    &__logo {
+      @include flex-center;
+      img {
+        @include image;
+      }
+    }
+
+    &__right-item {
+      text-align: right;
+      @include iphone12-media($iphone-screen) {
+        display: none;
+        padding-right: 20px
+      }
+
+      ul {
+        li {
+          a {
+            @include button;
+            &:hover {
+              @include button-hover;
+            }
+          }
+          .button_active {
+            @include active-button($white, $dark-blue);
+          }
+        }
+      }
+    }
+
+    &__toggle-menu {
+      display: none;
+
+      @include iphone12-media($iphone-screen) {
+        display: inline-block;
+        position: absolute;
+        right: 12px;
+        z-index: 5;
+        top: 12px;
+      }
+
+      &__bar {
+        @include iphone12-media($iphone-screen) {
+          display: inline-block;
+          background-color: $dark-blue;
+          color: $yellow;
+          padding: 5px 8px;
+          border-radius: 6px;
+          font-weight: bold;
+          font-size: 20px;
+
+          &:hover {
+            color: $dark-blue;
+            background-color: $yellow;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
